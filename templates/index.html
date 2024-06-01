@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate MCQs</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #E8EBF3;
+            /* justify-content: center; */
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa; /* Set background color */
+        }
+        .container {
+            margin-top: 200px;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increase box shadow effect */
+            background-color: #ffffff; /* Set background color */
+        }
+        .side-text {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40; /* Set text color */
+        }
+        .left-side-text {
+            left: 20px;
+        }
+        .right-side-text {
+            right: 20px;
+        }
+        nav{
+          border: 1px solid black;
+          border-radius: 30px;  
+          width: 100vw;
+        }
+    </style>
+    <style>
+        :root {
+  --icon-01: #348afe;
+  --icon-02: #ae7bfb;
+  --icon-03: #f9599f;
+  --icon-04: #f6695f;
+  --inactive: #e5e8ef;
+}
+
+.tabs {
+  --background: #fff;
+  --width: 300px;    
+  --height: 75px;
+  --border-radius: var(--height);     
+  background: var(--background);
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(229, 232, 239, 0.2);
+  display: flex;
+  
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body {
+  background: #E8EBF3;
+}
+
+.social-linkedin{
+    width: 2rem;
+    height: 2rem;
+}
+.social-github{
+    width: 2rem;
+    height: 2.2rem;
+}
+.name{
+    background: linear-gradient(30deg, #9ED8DB 40%, #007B82 70%);
+    background-clip: text;
+  -webkit-background-clip: text;
+}
+
+    </style>
+</head>
+<body>
+<!--   # here add nav -->
+<div class="tabs">
+    <div class="name">
+    A Project by Akshay
+    </div>
+    <div class="social-linkedin">
+        <a href="https://linkedin.com/in/akshaypratap09">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</a>
+</div>
+<div class="social-github">
+    <a href="https://github.com/AkshayPratapSingh09">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</a>
+</div>
+</div>
+  
+  
+  <!-- SVG -->
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0">
+    <clipPath id="path-icon-01">
+      <path d="M25.182 26.601A4.844 4.844 0 0121.762 28H4.838C2.166 28 0 25.85 0 23.197V11.014A3.464 3.464 0 011.354 8.35l9.125-7.305a4.336 4.336 0 015.529-.1l9.338 7.405a3.462 3.462 0 011.254 2.663v12.195c0 1.273-.51 2.493-1.418 3.392z"/>
+    </clipPath>
+    <clipPath id="path-detail-01">
+      <rect width="11.657" height="2.743" x="7.2" y="20.914" rx="1.371"/>
+    </clipPath>
+    <clipPath id="path-icon-02">
+      <path d="M20.076 0H7.938C3.192 0 0 3.332 0 8.288v11.438C0 24.668 3.192 28 7.938 28h12.138C24.822 28 28 24.668 28 19.726V8.288C28 3.332 24.822 0 20.076 0z"/>
+    </clipPath>
+    <clipPath id="path-detail-02">
+      <path d="M21.325 11.52l-4.001 5.164a1.034 1.034 0 01-1.478.184l-3.84-3.012-3.46 4.475a1.035 1.035 0 01-1.908-.603 1.007 1.007 0 01.222-.639l4.136-5.335a1.035 1.035 0 011.465-.197l3.841 3.024 3.373-4.339a1.022 1.022 0 011.453-.209c.452.354.54 1.003.197 1.463v.025z"/>
+    </clipPath>
+    <clipPath id="path-icon-03">
+      <path d="M20.076 0H7.938C3.192 0 0 3.332 0 8.288v11.438C0 24.668 3.192 28 7.938 28h12.138C24.822 28 28 24.668 28 19.726V8.288C28 3.332 24.822 0 20.076 0z"/>
+    </clipPath>
+    <clipPath id="path-detail-03">
+      <path d="M6.19 13.833a1.62 1.62 0 001.615 1.615 1.62 1.62 0 001.615-1.615c0-.888-.727-1.613-1.615-1.613s-1.614.725-1.614 1.613zm7.644 1.615a1.62 1.62 0 01-1.615-1.614c0-.888.726-1.613 1.615-1.613.888 0 1.614.725 1.614 1.613a1.62 1.62 0 01-1.614 1.614zm6.027 0a1.62 1.62 0 01-1.614-1.614c0-.888.726-1.613 1.614-1.613.888 0 1.601.725 1.601 1.613s-.713 1.615-1.6 1.615z"/>
+    </clipPath>
+    <clipPath id="path-icon-04">
+      <path d="M28 14c0 7.732-6.268 14-14 14S0 21.732 0 14C0 6.27 6.268 0 14 0s14 6.27 14 14z"/>
+    </clipPath>
+    <clipPath id="path-detail-04">
+      <path d="M19.404 9.044l-2.268 7.168a.912.912 0 01-.616.617l-7.14 2.239c-.476.155-.938-.308-.784-.784l2.24-7.182a.935.935 0 01.616-.616l7.168-2.24a.629.629 0 01.784.798"/>
+    </clipPath>
+  </svg> -->
+  
+  
+
+    <div class="container">
+        <h1 class="mb-4">Generate MCQs</h1>
+        <p class="lead">This application generates multiple-choice questions (MCQs) based on the provided text. You can either upload a PDF or TXT file containing the text.</p>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group" style="margin-top:50px;">
+                <label for="file">Upload File(s) (PDF or TXT)</label>
+                <input type="file" class="form-control-file" id="file" name="files[]" multiple style="margin-left:41%">
+            </div>
+            <div class="form-group">
+                <label for="num_questions">Number of Questions:</label>
+                <select style="margin-left:45%;background:black; color:white;width:10%" class="form-control" id="num_questions" name="num_questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate MCQs</button>
+        </form>
+    </div>
+</body>
+</html>
